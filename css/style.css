@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Palanquin";
+}
+
+header{
+    background-color: var(--orange);
+    padding: 20px 20px 20px 80px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header img:first-child{
+    width: 80px;
+    cursor: pointer;
+}
+header img:nth-child(2){
+    width: 30px;
+    cursor: pointer;
+}
+
