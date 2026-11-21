@@ -111,9 +111,15 @@ header img:nth-child(2){
 
 /* content */
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .dishHeadline{
     background-color: var(--orange);
     margin-top: 70px;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -130,6 +136,10 @@ header img:nth-child(2){
     color: var(--white);
     font-size: 40px;
     padding-left: 50px;
+}
+
+.menu{
+    width: 70%;
 }
 
 .dishes{
@@ -193,11 +203,47 @@ header img:nth-child(2){
     border: 1px solid var(--grey) ;
     border-radius: 20px;
     background-color: white;
+    cursor: pointer;
 
     font-size: 16px;
     font-weight: 600;
 
     padding-inline: 20px;
+}
+
+
+/* basket */
+
+.basket {
+    width: 30%;
+    height: 794px;
+    background-color: var(--grey);
+    color: #FDEADC;
+
+    padding: 40px 20px;
+    border-radius: 20px 0 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+.basket h2{
+    font-size: 32px;
+}
+.basket p{
+    font-size: 20px;
+    line-height: 1.4;
+}
+.basket img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
 }
 
 
