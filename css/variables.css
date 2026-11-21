@@ -1,6 +1,8 @@
 :root{
     --orange: #E76C1F;
     --grey: #363534;
+    --white: #FFFFFF;
+    --beige: #FDEADC;
 
     --mainfontsize: clamp(16px, 2.2vw, 24px);
     --pala: "Palanquin";
