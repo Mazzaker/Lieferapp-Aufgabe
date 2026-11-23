@@ -167,6 +167,8 @@ header img:nth-child(2){
     width: 200px;
     height: 120px;
     border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .dishInfo{
@@ -177,6 +179,7 @@ header img:nth-child(2){
 }
 
 .dishLeft{
+    width: 330px;
     height: 70px;
     display: flex;
     flex-direction: column;
@@ -188,6 +191,7 @@ header img:nth-child(2){
 }
 
 .dishRight{
+    
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -200,7 +204,6 @@ header img:nth-child(2){
 }
 .dishRight button{
     all: unset;
-    border: 1px solid var(--grey) ;
     border-radius: 20px;
     background-color: white;
     cursor: pointer;
@@ -210,13 +213,16 @@ header img:nth-child(2){
 
     padding-inline: 20px;
 }
+.dishRight button:hover{
+    color: var(--orange);
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
 
-
-/* basket */
+/* basketempty */
 
 .basket {
     width: 30%;
-    height: 794px;
+    height: auto;
     background-color: var(--grey);
     color: #FDEADC;
 
@@ -247,8 +253,113 @@ header img:nth-child(2){
 }
 
 
-/* footer */
+/* basketfull */
+.basketContent{
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.basketDishes{
+    max-height: 320px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.basketDish{
+    background-color: var(--beige);
+    color: var(--grey);
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.basketDish > p{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.basketDishBottom{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.basketDishBottom img{
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+.basketDishBottom > span{
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.basketDishBottomLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+.basketDishBottomLeft > span{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.basketSum {
+    width: 100%;
+    max-width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subtotal, .deliveryFee, .totalSum {
+    width: 100%;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalSum {
+    border-top: 2px solid var(--beige);
+    padding-top: 12px;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.basketSum button {
+    background-color: var(--orange);
+    color: white;
+
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin-top: 12px;
+
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.basketSum button:hover{
+    background-color: rgb(255, 166, 0);
+}
+
+/* footer */
 footer{
     background-color: var(--orange);
     color: white;

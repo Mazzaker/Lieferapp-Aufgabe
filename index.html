@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="icon" href="./assets/icons/burgerIcon.png">
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
@@ -15,7 +16,7 @@
     <script defer src="./js/script.js"></script>
 
 </head>
-<body>
+<body onload="init()">
     <header>
         <img src="./assets/icons/logo.png" alt="logo">
         <img src="./assets/icons/setting.png" alt="settings">
@@ -29,7 +30,7 @@
                     <h1>
                         <font color="#E76C1F">Burger</font>House
                     </h1>
-                    <div class="rating">
+                    <div class="rating" id="rating">
                         <img src="./assets/icons/star.png"> 
                         <span class="rate">
                             <b>4,1</b>
@@ -52,126 +53,49 @@
                 </h2>
             </div>
             <div class="menu">
-                <div class="dishes">
-                    <div class="dish">
-                        <img src="./assets/images/allMeat.jpg" alt="Burger">
-                        <div class="dishInfo">
-                            <div class="dishLeft">
-                                <h3>
-                                    Big Beef Burger
-                                </h3>
-                                <span>
-                                    Beef, Cheese, Lettuce, Tomatoes
-                                </span>
-                                
-                            </div>
-                            <div class="dishRight">
-                                <h3>
-                                    12,90 €
-                                </h3>
-                                <button>
-                                    Add to basket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img src="./assets/images/allMeat.jpg" alt="Burger">
-                        <div class="dishInfo">
-                            <div class="dishLeft">
-                                <h3>
-                                    Big Beef Burger
-                                </h3>
-                                <span>
-                                    Beef, Cheese, Lettuce, Tomatoes
-                                </span>
-                                
-                            </div>
-                            <div class="dishRight">
-                                <h3>
-                                    12,90 €
-                                </h3>
-                                <button>
-                                    Add to basket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img src="./assets/images/allMeat.jpg" alt="Burger">
-                        <div class="dishInfo">
-                            <div class="dishLeft">
-                                <h3>
-                                    Big Beef Burger
-                                </h3>
-                                <span>
-                                    Beef, Cheese, Lettuce, Tomatoes
-                                </span>
-                                
-                            </div>
-                            <div class="dishRight">
-                                <h3>
-                                    12,90 €
-                                </h3>
-                                <button>
-                                    Add to basket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img src="./assets/images/allMeat.jpg" alt="Burger">
-                        <div class="dishInfo">
-                            <div class="dishLeft">
-                                <h3>
-                                    Big Beef Burger
-                                </h3>
-                                <span>
-                                    Beef, Cheese, Lettuce, Tomatoes
-                                </span>
-                                
-                            </div>
-                            <div class="dishRight">
-                                <h3>
-                                    12,90 €
-                                </h3>
-                                <button>
-                                    Add to basket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dish">
-                        <img src="./assets/images/allMeat.jpg" alt="Burger">
-                        <div class="dishInfo">
-                            <div class="dishLeft">
-                                <h3>
-                                    Big Beef Burger
-                                </h3>
-                                <span>
-                                    Beef, Cheese, Lettuce, Tomatoes
-                                </span>
-                                
-                            </div>
-                            <div class="dishRight">
-                                <h3>
-                                    12,90 €
-                                </h3>
-                                <button>
-                                    Add to basket
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="dishes" id="dishes">
+                    
                 </div>
             </div>
-            <div class="basket">
+            <div class="basket" id="basket">
                 <h2>Your Basket</h2>
-                <p>
+                <!-- <p>
                     Nothing here yet.
                     Go ahead and choose something delicious!
                 </p>
-                <img src="./assets/icons/basket.png" alt="Basket">
+                <img src="./assets/icons/basket.png" alt="Basket">  -->
+                <div class="basketContent">
+                    <div class="basketDishes">
+                        <div class="basketDish">
+                            <p>
+                                XX x Burgername
+                            </p>
+                            <div class="basketDishBottom">
+                                <div class="basketDishBottomLeft">
+                                    <img src="./assets/icons/delete.png">
+                                    <span>1</span>
+                                    <span>+</span>
+                                </div>
+                                <span>16,90€</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basketSum">
+                        <div class="subtotal">
+                            <span>Subtotal</span>
+                            <span>XXXX€</span>
+                        </div>
+                        <div class="deliveryFee">
+                            <span>Delivery fee</span>
+                            <span>4,99€</span>
+                        </div>
+                        <div class="totalSum">
+                            <span>Total</span>
+                            <span>XXXX€</span>
+                        </div>
+                        <button>Buy now (XXX€)</button>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
