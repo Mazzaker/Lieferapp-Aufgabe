@@ -10,13 +10,12 @@ function htmlDishTemplate(i){
                         <span>
                             ${arrayDishes[i].ingredients}
                         </span>
-                        
                     </div>
                     <div class="dishRight">
                         <h3>
                             ${arrayDishes[i].price.toFixed(2)}€
                         </h3>
-                        <button onclick="addToBasket()">
+                        <button onclick="addToBasket(${i})">
                             Add to basket
                         </button>
                     </div>
