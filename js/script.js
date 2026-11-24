@@ -7,57 +7,81 @@ function init(){
 }
 
 function renderDishes(){
+    let html = "";
     for(let i = 0; i < arrayDishes.length; i++){
         dishes.innerHTML += htmlDishTemplate(i);
     }
 }
 
-function addToBasket(i){
-    arrayBasket.push({
-        dishID: i,
-        amount: 1
-    })
+function addToBasket(i) {
+    let idAlreadyInBasket = alreadyInBasket(i);
 
+    if (idAlreadyInBasket) {
+        idAlreadyInBasket.amount++;
+    } 
+    else {
+        arrayBasket.push({
+            dishID: i,
+            amount: 1
+        });
+    }
 
-    console.log(arrayBasket[i].dishID)
+    renderBasket();
+}
+
+function alreadyInBasket(dishID){
+    for (let i = 0; i < arrayBasket.length; i++) {
+        if (arrayBasket[i].dishID == dishID) {
+            return arrayBasket[i];
+        }
+    }
+    return undefined;
 }
 
 
-function htmlBasketTemplate(i){
+function renderBasket() {
+    if (arrayBasket.length === 0) {
     basket.innerHTML = `
         <h2>Your Basket</h2>
-        <div class="basketContent">
-                    <div class="basketDishes">
-                        <div class="basketDish">
-                            <p>
-                                XX x ${arrayDishes[i].name}
-                            </p>
-                            <div class="basketDishBottom">
-                                <div class="basketDishBottomLeft">
-                                    <img src="./assets/icons/delete.png">
-                                    <span>1</span>
-                                    <span>+</span>
-                                </div>
-                                <span>16,90€</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="basketSum">
-                        <div class="subtotal">
-                            <span>Subtotal</span>
-                            <span>XXXX€</span>
-                        </div>
-                        <div class="deliveryFee">
-                            <span>Delivery fee</span>
-                            <span>4,99€</span>
-                        </div>
-                        <div class="totalSum">
-                            <span>Total</span>
-                            <span>XXXX€</span>
-                        </div>
-                        <button>Buy now (XXX€)</button>
-                    </div>
-                </div>
-    `
+        <p>
+            Nothing here yet.
+            Go ahead and choose something delicious!
+        </p>
+        <img src="./assets/icons/basket.png" alt="Basket">
+    `;
+    return;
+    }
+
+    let html = "";
+
+    for (let i = 0; i < arrayBasket.length; i++) {
+        html += htmlBasketDishTemplate(i);
+    }
+
+    basket.innerHTML = htmlBasketTemplate(html, calculateSubtotal());
 }
+
+function calculateSubtotal() {
+    let subtotal = 0;
+
+    for (let i = 0; i < arrayBasket.length; i++) {
+        let dishBasket = arrayBasket[i];
+        let dishMenu = arrayDishes[dishBasket.dishID];
+
+        subtotal += dishMenu.price * dishBasket.amount;
+    }
+
+    return subtotal;
+}
+
+function removeFromBasket(i) {
+    if (arrayBasket[i].amount > 1) {
+        arrayBasket[i].amount--;
+    } else {
+        arrayBasket.splice(i, 1);
+    }
+
+    renderBasket();
+}
+
 
