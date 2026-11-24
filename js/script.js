@@ -13,6 +13,17 @@ function renderDishes(){
 }
 
 function addToBasket(i){
+    arrayBasket.push({
+        dishID: i,
+        amount: 1
+    })
+
+
+    console.log(arrayBasket[i].dishID)
+}
+
+
+function htmlBasketTemplate(i){
     basket.innerHTML = `
         <h2>Your Basket</h2>
         <div class="basketContent">
@@ -49,5 +60,4 @@ function addToBasket(i){
                 </div>
     `
 }
-
 
