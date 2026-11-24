@@ -281,6 +281,7 @@ header img:nth-child(2){
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
 }
 .basketDish > p{
     font-size: 22px;
@@ -315,6 +316,9 @@ header img:nth-child(2){
 .basketDishBottomLeft > span{
     font-size: 24px;
     font-weight: 600;
+}
+.basketDishBottomLeft > span:nth-child(1){
+    cursor: pointer;
 }
 .basketDishBottomLeft > span:nth-child(3){
     cursor: pointer;

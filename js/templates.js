@@ -35,8 +35,8 @@ function htmlBasketDishTemplate(i) {
 
             <div class="basketDishBottom">
                 <div class="basketDishBottomLeft">
-                    ${dishBasket.amount > 1
-                        ? `<span class="basketMinus" onclick="removeFromBasket(${i})">−</span>`
+                    ${dishBasket.amount > 1 
+                        ? `<span onclick="removeFromBasket(${i})">-</span>`
                         : `<img src="./assets/icons/delete.png" onclick="removeFromBasket(${i})">`
                     }
                     <span>${dishBasket.amount}</span>
