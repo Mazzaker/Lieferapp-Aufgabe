@@ -3,6 +3,7 @@ let dishes = document.getElementById("dishes")
 let basket = document.getElementById("basket")
 let orderDialog = document.getElementById("orderDialog")
 
+
 function init(){
     renderDishes();
 }
@@ -85,18 +86,22 @@ function removeFromBasket(i) {
     renderBasket();
 }
 
+let dialogTimer;
+
 function buyNow(){
     arrayBasket.length = 0;
     renderBasket();
+    clearTimeout(dialogTimer);
 
     orderDialog.showModal();
 
-    setTimeout(() => {
-        dialog.close();
-        }, 5000);
+    dialogTimer = setTimeout(() => {
+        orderDialog.close();
+        }, 2500);
 }
 
 function closeDialog(){
+    clearTimeout(dialogTimer);
     orderDialog.close();
 }
 
