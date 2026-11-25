@@ -40,7 +40,7 @@ function alreadyInBasket(dishID){
 
 
 function renderBasket() {
-    if (arrayBasket.length === 0) {
+    if (arrayBasket.length == 0) {
     basket.innerHTML = `
         <h2>Your Basket</h2>
         <p>

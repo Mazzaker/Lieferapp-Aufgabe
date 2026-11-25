@@ -24,7 +24,6 @@ function htmlDishTemplate(i){
         `
 }
 
-
 function htmlBasketDishTemplate(i) {
     let dishBasket = arrayBasket[i];
     let dishMenu = arrayDishes[dishBasket.dishID];
