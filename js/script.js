@@ -1,6 +1,7 @@
 let rating = document.getElementById("rating")
 let dishes = document.getElementById("dishes")
 let basket = document.getElementById("basket")
+let orderDialog = document.getElementById("orderDialog")
 
 function init(){
     renderDishes();
@@ -82,6 +83,21 @@ function removeFromBasket(i) {
     }
 
     renderBasket();
+}
+
+function buyNow(){
+    arrayBasket.length = 0;
+    renderBasket();
+
+    orderDialog.showModal();
+
+    setTimeout(() => {
+        dialog.close();
+        }, 5000);
+}
+
+function closeDialog(){
+    orderDialog.close();
 }
 
 

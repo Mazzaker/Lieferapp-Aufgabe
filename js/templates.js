@@ -75,7 +75,7 @@ function htmlBasketTemplate(html, subtotal) {
                     <span>${total.toFixed(2).replace(".", ",")}€</span>
                 </div>
 
-                <button>
+                <button onclick="buyNow()">
                     Buy now (${total.toFixed(2).replace(".", ",")}€)
                 </button>
             </div>

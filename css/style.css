@@ -367,6 +367,60 @@ header img:nth-child(2){
     background-color: rgb(255, 166, 0);
 }
 
+
+/* Order conifimred */
+#orderDialog {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    width: 320px;
+    max-width: 90%;
+    height: fit-content;
+    padding: 40px 20px 24px;
+
+    background-color: var(--grey);
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+#orderDialog img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+#orderDialog h2 {
+    font-size: 26px;
+    line-height: 1.2;
+}
+#orderDialog p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+#orderDialog button{
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    background: none;
+    border: none;
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+}
+#orderDialog button:hover{
+    background-color: red;
+    border-radius: 5px;
+}
+
+#orderDialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* footer */
 footer{
     background-color: var(--orange);

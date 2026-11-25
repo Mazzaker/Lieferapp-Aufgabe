@@ -66,10 +66,11 @@
                 </p>
                 <img src="./assets/icons/basket.png" alt="Basket"> 
             </div>
-            <dialog id="orderDialog">
-                <h2>Bestellung bestätigt!</h2>
-                <p>Deine Bestelung ist auf dem Weg!</p>
-                <button onclick="closeOrderDialog()">Close</button>
+            <dialog id="orderDialog" onclick="if (event.target === this) closeOrderDialog()">
+                <button onclick="closeDialog()">x</button>
+                <img src="./assets/icons/orderConfirmed.png" alt="car">
+                <h2>Order confirmed!</h2>
+                <p>Your food is on the Way!</p>
             </dialog>
         </section>
     </main>
