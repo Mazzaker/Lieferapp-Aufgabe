@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BurgerHouse – Bestellapp</title>
     <link rel="icon" href="./assets/icons/burgerIcon.png">
 
     <link rel="stylesheet" href="./css/style.css">
@@ -18,15 +18,17 @@
 
 </head>
 <body onload="init()">
-    <header>
-        <img src="./assets/icons/logo.png" alt="logo">
-        <img src="./assets/icons/setting.png" alt="settings">
+    <header id="home">
+        <div class="headerContent">
+            <img src="./assets/icons/logo.png" alt="logo">
+            <img src="./assets/icons/setting.png" alt="settings">
+        </div>
     </header>
     <main>
         <section class="landingpage">
             <img src="./assets/images/bg_landingpage.jpg" alt="background">
             <img src="./assets/images/Burgerlogo.png" alt="burgerlogo"> 
-            <div class="info">
+            <div class="info" id="restaurantInfo">
                 <div class="headlineAndRating">
                     <h1>
                         <font color="#E76C1F">Burger</font>House
@@ -46,13 +48,13 @@
                 </p>
             </div>
         </section>
-        <section class="content">
-            <div class="dishHeadline">
-                <img src="./assets/icons/burgerIcon.png"> 
-                <h2>
-                    Burgers & Sandwiches
-                </h2>
+        <div class="dishHeadline">
+            <div class="dishHeadlineContent">
+                <img src="./assets/icons/burgerIcon.png" alt="Burger">
+                <h2>Burgers & Sandwiches</h2>
             </div>
+        </div>
+        <section class="content">
             <div class="menu">
                 <div class="dishes" id="dishes">
                     
@@ -66,18 +68,38 @@
                 </p>
                 <img src="./assets/icons/basket.png" alt="Basket"> 
             </div>
-            <dialog id="orderDialog" onclick="if (event.target === this) closeDialog()">
-                <button onclick="closeDialog()">x</button>
-                <img src="./assets/icons/orderConfirmed.png" alt="car">
-                <h2>Order confirmed!</h2>
-                <p>Your food is on the Way!</p>
-            </dialog>
         </section>
+        <dialog id="orderDialog" onclick="if (event.target === this) closeDialog()">
+            <button onclick="closeDialog()">x</button>
+            <img src="./assets/icons/orderConfirmed.png" alt="Lieferung">
+            <h2>Order confirmed!</h2>
+            <p>Your food is on the Way!</p>
+        </dialog>
     </main>
     <footer>
-        <span>Burgerhouse</span>
-        <span>Imprint</span>
-        <span>Cookie Preferences</span>
+        <div class="footerContent">
+            <span>Burgerhouse</span>
+            <span>Imprint</span>
+            <span>Cookie Preferences</span>
+        </div>
     </footer>
+    <nav class="mobileNav">
+        <a href="#home" aria-label="Startseite">
+            <img src="./assets/icons/home.png" alt="home">
+        </a>
+        <a href="#restaurantInfo" aria-label="Restaurant">
+            <img src="./assets/icons/person.png" alt="person">
+        </a>
+        <a href="#dishes" aria-label="Speisekarte">
+            <img src="./assets/icons/takeout_dining_2.png" alt="takeout">
+        </a>
+        <button onclick="openMobileBasket()" aria-label="Warenkorb öffnen">
+            <img src="./assets/icons/shopping_cart.png" alt="basket">
+        </button>
+    </nav>
+    <dialog id="mobileBasketDialog" onclick="if (event.target === this) closeMobileBasket()">
+        <button class="mobileBasketClose" onclick="closeMobileBasket()">×</button>
+        <div id="mobileBasketContent"></div>
+    </dialog>
 </body>
 </html>

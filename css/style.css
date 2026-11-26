@@ -4,32 +4,46 @@
     scroll-behavior: smooth;
 }
 
-body{
-    font-family: "Palanquin";
+html {
+    overflow-x: clip;
 }
 
-/* Landingpage */
-
-header{
-    background-color: var(--orange);
-    padding: 20px 20px 20px 80px;
+body {
+    font-family: "Palanquin";
     width: 100%;
+    overflow-x: clip;
+}
 
+
+
+header {
+    background-color: var(--orange);
+    width: 100%;
+}
+
+.headerContent {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 20px 20px 80px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-header img:first-child{
+.headerContent img:first-child{
     width: 80px;
     cursor: pointer;
 }
-header img:nth-child(2){
+.headerContent img:nth-child(2){
     width: 30px;
     cursor: pointer;
 }
 
+
 .landingpage{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,9 +123,12 @@ header img:nth-child(2){
 }
 
 
-/* content */
+
 
 .content {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
 }
@@ -120,19 +137,24 @@ header img:nth-child(2){
     background-color: var(--orange);
     margin-top: 70px;
     width: 100%;
+}
 
+.dishHeadlineContent {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
-.dishHeadline > img{
+
+.dishHeadlineContent > img{
     position: relative;
     width: 300px;
 
     margin: -30px 0 0;
     padding-left: 200px;
 }
-.dishHeadline > h2{
+.dishHeadlineContent > h2{
     color: var(--white);
     font-size: 40px;
     padding-left: 50px;
@@ -218,7 +240,7 @@ header img:nth-child(2){
     box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.2);
 }
 
-/* basketempty */
+
 
 .basket {
     width: 30%;
@@ -253,7 +275,7 @@ header img:nth-child(2){
 }
 
 
-/* basketfull */
+
 .basketContent{
     width: 100%;
 
@@ -368,7 +390,7 @@ header img:nth-child(2){
 }
 
 
-/* Order conifimred */
+
 #orderDialog {
     position: fixed;
     inset: 0;
@@ -421,19 +443,31 @@ header img:nth-child(2){
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* footer */
+
 footer{
     background-color: var(--orange);
     color: white;
-    padding-block: 32px;
     width: 100%;
+}
 
+.footerContent {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-block: 32px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     gap: 70px;
 }
 
 footer span{
     cursor: pointer;
+}
+
+.mobileNav {
+    display: none;
+}
+
+#mobileBasketDialog {
+    display: none;
 }

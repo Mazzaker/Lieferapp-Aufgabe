@@ -1,0 +1,546 @@
+img {
+    max-width: 100%;
+}
+
+.menu, .basket, .dishes, .dish, .dishInfo, .dishLeft, .dishRight {
+    min-width: 0;
+}
+
+.basketContent, .basketDishes, .basketDish, .basketSum {
+    min-width: 0;
+}
+
+@media (max-width: 1440px) {
+    .dishes {
+        width: auto;
+        margin-left: 6%;
+        margin-right: 16px;
+    }
+
+    .dish {
+        width: 100%;
+        max-width: 713px;
+    }
+
+    .dishLeft {
+        width: auto;
+        flex: 1;
+    }
+
+    .dishRight {
+        flex-shrink: 0;
+    }
+
+    .dishHeadlineContent > img {
+        padding-left: 8%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .headerContent {
+        padding: 16px 24px;
+    }
+
+    .landingpage > img:first-child {
+        height: 380px;
+    }
+
+    .landingpage > img:nth-child(2) {
+        width: 160px;
+        height: 160px;
+        margin-top: -80px;
+    }
+
+    .headlineAndRating > h1 {
+        font-size: 38px;
+    }
+
+    .info > p {
+        font-size: 19px;
+    }
+
+    .menu {
+        width: 65%;
+    }
+
+    .basket {
+        width: 35%;
+        padding: 28px 14px;
+        gap: 26px;
+    }
+
+    .basket h2 {
+        font-size: 26px;
+    }
+
+    .basket p {
+        font-size: 16px;
+    }
+
+    .basketDish {
+        padding: 10px 12px;
+    }
+
+    .basketDish > p {
+        font-size: 18px;
+    }
+
+    .basketDishBottom > span, .basketDishBottomLeft > span {
+        font-size: 17px;
+    }
+
+    .basketSum {
+        max-width: 100%;
+    }
+
+    .basketSum button {
+        font-size: 17px;
+    }
+
+    .dishes {
+        margin: 30px 16px 30px 24px;
+        gap: 12px;
+    }
+
+    .dish {
+        gap: 10px;
+    }
+
+    .dish > img {
+        width: 135px;
+        height: 110px;
+    }
+
+    .dishLeft {
+        height: auto;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .dishLeft h3, .dishRight h3 {
+        font-size: 18px;
+    }
+
+    .dishLeft span {
+        font-size: 13px;
+    }
+
+    .dishRight {
+        height: 100px;
+    }
+
+    .dishRight button {
+        font-size: 12px;
+        padding-inline: 9px;
+    }
+
+    .dishHeadlineContent > img {
+        width: 125px;
+        padding-left: 50px;
+    }
+
+    .dishHeadlineContent > h2 {
+        font-size: 30px;
+        padding-left: 22px;
+    }
+}
+
+@media (max-width: 720px) {
+    .landingpage > img:first-child {
+        height: 280px;
+    }
+
+    .landingpage > img:nth-child(2) {
+        width: 136px;
+        height: 136px;
+        margin-top: -68px;
+    }
+
+    .info {
+        width: 92%;
+    }
+
+    .headlineAndRating {
+        gap: 12px;
+    }
+
+    .headlineAndRating > h1 {
+        font-size: 32px;
+    }
+
+    .info > p {
+        font-size: 17px;
+    }
+
+    .dishHeadline {
+        margin-top: 44px;
+    }
+
+    .dishHeadlineContent > img {
+        width: 74px;
+        padding-left: 20px;
+        margin-top: -14px;
+    }
+
+    .dishHeadlineContent > h2 {
+        font-size: 25px;
+        padding-left: 15px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    .dishes {
+        width: 100%;
+        max-width: 640px;
+        margin: 24px auto;
+    }
+
+    .dish > img {
+        width: 150px;
+        height: 115px;
+    }
+
+    .basket {
+        width: calc(100% - 32px);
+        max-width: 520px;
+        margin: 0 auto 28px;
+        position: static;
+        align-self: center;
+        border-radius: 18px;
+    }
+
+    .footerContent {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 24px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-bottom: 68px;
+    }
+
+    .headerContent {
+        min-height: 58px;
+        padding: 10px 16px;
+    }
+
+    .headerContent img:first-child {
+        width: 86px;
+    }
+
+    .headerContent img:nth-child(2) {
+        display: none;
+    }
+
+    .landingpage > img:first-child {
+        width: calc(100% - 24px);
+        height: 250px;
+        margin-top: 12px;
+        border-radius: 12px;
+        object-position: center;
+    }
+
+    .landingpage > img:nth-child(2) {
+        width: 112px;
+        height: 112px;
+        margin-top: -56px;
+        border-width: 7px;
+    }
+
+    .info {
+        width: 100%;
+        padding: 10px 16px 0;
+        gap: 6px;
+    }
+
+    .headlineAndRating {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .headlineAndRating > h1 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .rating {
+        order: -1;
+        gap: 4px;
+        padding: 2px 5px;
+    }
+
+    .rating > img {
+        width: 17px;
+        height: 17px;
+    }
+
+    .rate, .comments {
+        font-size: 12px;
+    }
+
+    .info > p {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .dishHeadline {
+        margin-top: 48px;
+    }
+
+    .dishHeadlineContent {
+        flex-direction: column;
+        padding: 0 12px 7px;
+    }
+
+    .dishHeadlineContent > img {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        margin: -22px 0 0;
+        object-fit: contain;
+    }
+
+    .dishHeadlineContent > h2 {
+        font-size: 21px;
+        line-height: 1.15;
+        padding: 0;
+        text-align: center;
+    }
+
+    .menu {
+        width: 100%;
+        padding: 16px 12px 22px;
+    }
+
+    .dishes {
+        width: 100%;
+        margin: 0;
+        gap: 12px;
+    }
+
+    .dish {
+        width: 100%;
+        padding: 9px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+    }
+
+    .dish > img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 7px;
+    }
+
+    .dishInfo {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dishLeft {
+        width: 100%;
+        height: auto;
+        gap: 3px;
+    }
+
+    .dishLeft h3 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .dishLeft span {
+        font-size: 12px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .dishRight {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .dishRight h3 {
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .dishRight button {
+        font-size: 12px;
+        padding: 4px 10px;
+        white-space: nowrap;
+    }
+
+    .content > .basket {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .mobileNav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--grey);
+        border-radius: 12px 12px 0 0;
+    }
+
+    .mobileNav a, .mobileNav button {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border: none;
+        color: white;
+        text-decoration: none;
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+    .mobileNav img {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+    }
+
+    #mobileBasketDialog[open] {
+        position: fixed;
+        inset: 0;
+        margin: auto;
+        display: block;
+        width: calc(100% - 24px);
+        max-width: 390px;
+        max-height: calc(100dvh - 24px);
+        overflow-y: auto;
+        padding: 28px 14px 22px;
+        border: none;
+        border-radius: 18px;
+        background-color: var(--grey);
+        color: #FDEADC;
+    }
+
+    #mobileBasketDialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .mobileBasketClose {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    #mobileBasketContent > h2 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 18px;
+    }
+
+    #mobileBasketContent > p {
+        font-size: 15px;
+        text-align: center;
+        padding: 10px 6px;
+    }
+
+    #mobileBasketContent > img {
+        display: block;
+        width: 68px;
+        height: 68px;
+        object-fit: contain;
+        margin: 12px auto;
+    }
+
+    #mobileBasketDialog .basketContent {
+        width: 100%;
+        gap: 18px;
+    }
+
+    #mobileBasketDialog .basketDishes {
+        width: 100%;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    #mobileBasketDialog .basketDish {
+        width: 100%;
+        flex-shrink: 0;
+        padding: 10px 12px;
+        border-radius: 12px;
+        text-align: left;
+    }
+
+    #mobileBasketDialog .basketDish > p {
+        font-size: 15px;
+    }
+
+    #mobileBasketDialog .basketDishBottom > span, #mobileBasketDialog .basketDishBottomLeft > span {
+        font-size: 15px;
+    }
+
+    #mobileBasketDialog .basketDishBottom img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #mobileBasketDialog .basketSum {
+        width: 100%;
+        max-width: 100%;
+        gap: 8px;
+    }
+
+    #mobileBasketDialog .subtotal, #mobileBasketDialog .deliveryFee, #mobileBasketDialog .totalSum {
+        font-size: 14px;
+    }
+
+    #mobileBasketDialog .basketSum button {
+        width: 100%;
+        font-size: 16px;
+        padding: 9px 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .dishLeft h3 {
+        font-size: 16px;
+    }
+
+    .dishRight h3 {
+        font-size: 15px;
+    }
+
+    .dishRight button {
+        font-size: 11px;
+    }
+
+    .dishHeadlineContent > h2 {
+        font-size: 19px;
+    }
+}
